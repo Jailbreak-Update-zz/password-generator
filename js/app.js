@@ -1,178 +1,74 @@
-(function(){
-	/* ----------------------------- */
-	/* Variables y Objetos Generales */
-	/* ----------------------------- */
-
-	// Variable donde guardamos el formulario de la app.
-	var app = document.getElementById('app');
-
-	// Variable donde guardamos el input de numero de caracteres.
-	var inputCaracteres = document.getElementById('numero-caracteres');
-
-	// Objeto que contiene toda la configuracion que usaremos para generar la contraseña.
-	// Modificaremos este objeto para decidir si queremos o no simbolos, numeros o mayuculas.
-	var configuracion = {
-		caracteres: parseInt(inputCaracteres.value),
-		simbolos: true,
-		numeros: true,
-		mayusculas: true,
-		minusculas: true
+var _0xc205=["\x61\x70\x70","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6E\x75\x6D\x65\x72\x6F\x2D\x63\x61\x72\x61\x63\x74\x65\x72\x65\x73","\x76\x61\x6C\x75\x65","\x30\x20\x31\x20\x32\x20\x33\x20\x34\x20\x35\x20\x36\x20\x37\x20\x38\x20\x39","\x21\x20\xA1\x20\x40\x20\x23\x20\x24\x20\x25\x20\x5E\x20\x26\x20\x2A\x20\x28\x20\x29\x20\x5F\x20\x2D\x20\x2B\x20\x3D\x20\x7B\x20\x5B\x20\x7D\x20\x5D\x20\x3B\x20\x3A\x20\x3C\x20\x2C\x20\x3E\x20\x2E\x20\x3F\x20\x2F","\x41\x20\x42\x20\x43\x20\x44\x20\x45\x20\x46\x20\x47\x20\x48\x20\x49\x20\x4A\x20\x4B\x20\x4C\x20\x4D\x20\x4E\x20\x4F\x20\x50\x20\x51\x20\x52\x20\x53\x20\x54\x20\x55\x20\x56\x20\x57\x20\x58\x20\x59\x20\x5A","\x61\x20\x62\x20\x63\x20\x64\x20\x65\x20\x66\x20\x67\x20\x68\x20\x69\x20\x6A\x20\x6B\x20\x6C\x20\x6D\x20\x6E\x20\x6F\x20\x70\x20\x71\x20\x72\x20\x73\x20\x74\x20\x75\x20\x76\x20\x77\x20\x78\x20\x79\x20\x7A","\x73\x75\x62\x6D\x69\x74","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x6C\x69\x63\x6B","\x63\x61\x72\x61\x63\x74\x65\x72\x65\x73","\x62\x74\x6E\x2D\x6D\x61\x73\x2D\x75\x6E\x6F","\x6E\x61\x6D\x65\x64\x49\x74\x65\x6D","\x65\x6C\x65\x6D\x65\x6E\x74\x73","\x62\x74\x6E\x2D\x6D\x65\x6E\x6F\x73\x2D\x75\x6E\x6F","\x73\x69\x6D\x62\x6F\x6C\x6F\x73","\x62\x74\x6E\x2D\x73\x69\x6D\x62\x6F\x6C\x6F\x73","\x6E\x75\x6D\x65\x72\x6F\x73","\x62\x74\x6E\x2D\x6E\x75\x6D\x65\x72\x6F\x73","\x6D\x61\x79\x75\x73\x63\x75\x6C\x61\x73","\x62\x74\x6E\x2D\x6D\x61\x79\x75\x73\x63\x75\x6C\x61\x73","\x62\x74\x6E\x2D\x67\x65\x6E\x65\x72\x61\x72","\x69\x6E\x70\x75\x74\x2D\x70\x61\x73\x73\x77\x6F\x72\x64","\x66\x61\x6C\x73\x65","\x74\x6F\x67\x67\x6C\x65","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x66\x61\x2D\x63\x68\x65\x63\x6B","\x63\x68\x69\x6C\x64\x4E\x6F\x64\x65\x73","\x66\x61\x2D\x74\x69\x6D\x65\x73","","\x20","\x74\x72\x69\x6D","\x73\x70\x6C\x69\x74","\x72\x61\x6E\x64\x6F\x6D","\x6C\x65\x6E\x67\x74\x68","\x66\x6C\x6F\x6F\x72","\x73\x65\x6C\x65\x63\x74","\x63\x6F\x70\x79","\x65\x78\x65\x63\x43\x6F\x6D\x6D\x61\x6E\x64","\x61\x63\x74\x69\x76\x65","\x61\x64\x64","\x61\x6C\x65\x72\x74\x61\x2D\x63\x6F\x70\x69\x61\x64\x6F","\x72\x65\x6D\x6F\x76\x65"];
+(function()
+{
+	var _0x2d59x1=document[_0xc205[1]](_0xc205[0]);
+	var _0x2d59x2=document[_0xc205[1]](_0xc205[2]);
+	var _0x2d59x3={caracteres:parseInt(_0x2d59x2[_0xc205[3]]),simbolos:true,numeros:true,mayusculas:true,minusculas:true};
+	var _0x2d59x4={numeros:_0xc205[4],simbolos:_0xc205[5],mayusculas:_0xc205[6],minusculas:_0xc205[7]};
+	_0x2d59x1[_0xc205[10]](_0xc205[8],function(_0x2d59x5)
+	{
+		_0x2d59x5[_0xc205[9]]()
 	}
-
-	// Objeto que contiene cadenas de texto con todos los caracteres que usaremos para generar la contraseña.
-	// Caracteres separados por categoria (propiedad del objeto).
-	var caracteres = {
-		numeros: '0 1 2 3 4 5 6 7 8 9',
-		simbolos: '! ¡ @ # $ % ^ & * ( ) _ - + = { [ } ] ; : < , > . ? /',
-		mayusculas: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z',
-		minusculas: 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[13])[_0xc205[10]](_0xc205[11],function()
+	{
+		_0x2d59x3[_0xc205[12]]++;_0x2d59x2[_0xc205[3]]= _0x2d59x3[_0xc205[12]]
 	}
-
-	/* ----------------------------- */
-	/* Eventos */
-	/* ----------------------------- */
-
-	// Evento para evitar que la app haga un submit para enviar los datos y se refresque la pagina.
-	app.addEventListener('submit', function(e){
-		e.preventDefault();
-	});
-
-	// Evento para el boton que incrementa en uno el numero de caracteres.
-	app.elements.namedItem('btn-mas-uno').addEventListener('click', function(){
-		configuracion.caracteres++;
-		inputCaracteres.value = configuracion.caracteres;
-
-		// console.log para comprobar que se incrementa el numero de caracteres
-		// console.log('Numero de caracteres: ' + configuracion.caracteres);
-	});
-
-	// Evento para el boton que decrementa en uno el numero de caracteres.
-	app.elements.namedItem('btn-menos-uno').addEventListener('click', function(){
-		// Validamos que no puedan seleccionar un numero menor a 1
-		if (configuracion.caracteres > 8) {
-			configuracion.caracteres--;
-			inputCaracteres.value = configuracion.caracteres;
-
-			// console.log para comprobar que se incrementa el numero de caracteres.
-			// console.log('Numero de caracteres: ' + configuracion.caracteres);
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[16])[_0xc205[10]](_0xc205[11],function()
+	{
+		if(_0x2d59x3[_0xc205[12]]> 8)
+		{
+			_0x2d59x3[_0xc205[12]]--;_0x2d59x2[_0xc205[3]]= _0x2d59x3[_0xc205[12]]
 		}
-	});
-
-	// Evento para el boton de simbolos que activara o desactivara si queremos simbolos en la contraseña.
-	app.elements.namedItem('btn-simbolos').addEventListener('click', function(){
-		// Ejecutamos la funcion que alternara el icono y el fondo del boton.
-		btnToggle(this);
-
-		// Alternamos entre true y false en la propiedad del objeto de configuracion.
-		configuracion.simbolos = !configuracion.simbolos;
-
-		// console.log para comprobar que se activan y desactivan los simbolos.
-		// console.log('Simbolos activados: ' + configuracion.simbolos);
-	});
-
-	// Evento para el boton de numeros que activara o desactivara si queremos numeros en la contraseña.
-	app.elements.namedItem('btn-numeros').addEventListener('click', function(){
-		// Ejecutamos la funcion que alternara el icono y el fondo del boton.
-		btnToggle(this);
-
-		// Alternamos entre true y false en la propiedad del objeto de configuracion.
-		configuracion.numeros = !configuracion.numeros;
-
-		// console.log para comprobar que se activan y desactivan los numeros.
-		// console.log('Numeros activados: ' + configuracion.numeros);
-	});
-
-	// Evento para el boton de mayusculas que activara o desactivara si queremos mayusculas en la contraseña.
-	app.elements.namedItem('btn-mayusculas').addEventListener('click', function(){
-		// Ejecutamos la funcion que alternara el icono y el fondo del boton.
-		btnToggle(this);
-
-		// Alternamos entre true y false en la propiedad del objeto de configuracion.
-		configuracion.mayusculas = !configuracion.mayusculas;
-
-		// console.log para comprobar que se activan y desactivan los numeros.
-		// console.log('Mayuscylas activadas: ' + configuracion.mayusculas);
-	});
-
-	// Evento para el boton de generar contraseña.
-	app.elements.namedItem('btn-generar').addEventListener('click', function(){
-		// Ejecutamos la funcion que generara la contraseña.
-		generarPassword();
-	});
-
-	// Evento para el input de contraseña cuando reciba un click.
-	app.elements.namedItem('input-password').addEventListener('click', function(){
-		// Ejecutamos la funcion que copiara el texto.
-		copiarPassword();
-	});
-	
-	/* ----------------------------- */
-	/* Funciones */
-	/* ----------------------------- */
-	
-	// Funcion que permite alternar el estilo e icono de los botones.
-	function btnToggle(elemento){
-		elemento.classList.toggle('false');
-		elemento.childNodes[0].classList.toggle('fa-check');
-		elemento.childNodes[0].classList.toggle('fa-times');
 	}
-	
-	// Funcion que genera la contraseña.
-	function generarPassword(){
-		// Variable en donde guardaremos la cadena de texto con todos los caracteres que podemos usar para generar la contraseña.
-		var caracteresFinales = '';
-
-		// Variable en donde guardaremos caracter por caractere la contraseña.
-		var password = '';
-
-		// Iteramos sobre el objeto configuracion para acceder a cada una de las propiedades.
-		for(propiedad in configuracion){
-			// Preguntamos si la propiedad es igual a true.
-			// Entonces significa que si quiere aceptar simbolos / numeros / mayusculas.
-			if (configuracion[propiedad] == true){
-				// conso.log para identificar que es configuracion[propiedad].
-				// console.log(configuracion[propiedad]);
-
-				// A la variable de caracteres finales le sumamos la cadena de texto correspondiente a la iteracion actual.
-				// En pocas palabras, vamos creando una cadena de texto que contiene todos los caracteres que si podemos usar.
-				caracteresFinales += caracteres[propiedad] + ' ';
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[18])[_0xc205[10]](_0xc205[11],function()
+	{
+		_0x2d59x6(this);_0x2d59x3[_0xc205[17]]=  !_0x2d59x3[_0xc205[17]]
+	}
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[20])[_0xc205[10]](_0xc205[11],function()
+	{
+		_0x2d59x6(this);_0x2d59x3[_0xc205[19]]=  !_0x2d59x3[_0xc205[19]]
+	}
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[22])[_0xc205[10]](_0xc205[11],function()
+	{
+		_0x2d59x6(this);_0x2d59x3[_0xc205[21]]=  !_0x2d59x3[_0xc205[21]]
+	}
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[23])[_0xc205[10]](_0xc205[11],function()
+	{
+		_0x2d59x8()
+	}
+	);_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[24])[_0xc205[10]](_0xc205[11],function()
+	{
+		_0x2d59xc()
+	}
+	);function _0x2d59x6(_0x2d59x7)
+	{
+		_0x2d59x7[_0xc205[27]][_0xc205[26]](_0xc205[25]);_0x2d59x7[_0xc205[29]][0][_0xc205[27]][_0xc205[26]](_0xc205[28]);_0x2d59x7[_0xc205[29]][0][_0xc205[27]][_0xc205[26]](_0xc205[30])
+	}
+	function _0x2d59x8()
+	{
+		var _0x2d59x9=_0xc205[31];
+		var _0x2d59xa=_0xc205[31];
+		for(propiedad in _0x2d59x3)
+		{
+			if(_0x2d59x3[propiedad]== true)
+			{
+				_0x2d59x9+= _0x2d59x4[propiedad]+ _0xc205[32]
 			}
 		}
-
-		// Eliminamos el ultimo espaciado que sobra en la cadena de texto.
-		caracteresFinales = caracteresFinales.trim();
-
-		// console.log para comprobar que la variable de caracteres finales contiene todos los caracteres que el usuario si quiere.
-		// console.log(caracteresFinales);
-		
-		// Convertimos la cadena de texto de caracteres finales a un arreglo.
-		caracteresFinales = caracteresFinales.split(' ');
-
-		// Ciclo que genera la contraseña letra por letra al azar.
-		for(var i = 0; i < configuracion.caracteres; i++){
-			// A la variable password le vamos sumando una letra al azar por cada iteracion.
-			// Primero tomamos un numero al azar que va del 0 al numero de caracteresFinales.
-			// Y despues usamos ese numero para acceder a una posicion del arreglo al azar de caracteresFinales.
-			password += caracteresFinales[Math.floor(Math.random() * caracteresFinales.length)];
+		_0x2d59x9= _0x2d59x9[_0xc205[33]]();_0x2d59x9= _0x2d59x9[_0xc205[34]](_0xc205[32]);for(var _0x2d59xb=0;_0x2d59xb< _0x2d59x3[_0xc205[12]];_0x2d59xb++)
+		{
+			_0x2d59xa+= _0x2d59x9[Math[_0xc205[37]](Math[_0xc205[35]]()* _0x2d59x9[_0xc205[36]])]
 		}
-
-		// Mostramos la password en el input de contraseña.
-		app.elements.namedItem('input-password').value = password;
+		_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[24])[_0xc205[3]]= _0x2d59xa
 	}
-
-	// Funcion que nos permite copiar el texto al portapapeles.
-	function copiarPassword(){
-		// Selecciona el texto de un input
-		app.elements.namedItem('input-password').select();
-		// Copiamos el Texto
-		document.execCommand("copy");
-		document.getElementById('alerta-copiado').classList.add('active');
-		
-		setTimeout(function(){
-			document.getElementById('alerta-copiado').classList.remove('active');
-		}, 2000)
+	function _0x2d59xc()
+	{
+		_0x2d59x1[_0xc205[15]][_0xc205[14]](_0xc205[24])[_0xc205[38]]();document[_0xc205[40]](_0xc205[39]);document[_0xc205[1]](_0xc205[43])[_0xc205[27]][_0xc205[42]](_0xc205[41]);setTimeout(function()
+		{
+			document[_0xc205[1]](_0xc205[43])[_0xc205[27]][_0xc205[44]](_0xc205[41])
+		}
+		,2000)
 	}
-
-	// Generamos una password con la configuracion por defecto al cargar la pagina
-	generarPassword();
-}())
+	_0x2d59x8()
+}
+())

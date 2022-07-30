@@ -13,15 +13,16 @@
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
+	overflow-x: hidden
 }
 
 *::selection {
-	background:#33257E ;
+	background:#7e2525 ;
 	color:#fff;
 }
 
 *::-moz-selection {
-	background:#33257E;
+	background:#7e2525;
 	color:#fff;
 }
 
@@ -104,11 +105,11 @@ a:hover {
 }
 
 .app .btn:hover {
-	background: #B4A5FF;
+	background: #ffa5a5;
 }
 
 .app .btn.false{
-	background: #33257E;
+	background: #7e2525;
 }
 
 /* ------------------------- */
@@ -159,7 +160,6 @@ a:hover {
 	font-size: 18px;
 	padding: 0;
 	line-height: 40px;
-	position: relative;
 	z-index: 1;
 }
 
